@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "LeftMenuController.h"
 #import "MainTableViewController.h"
+#import "MainTabBarController.h"
 
 @interface RootViewController ()
 
@@ -37,10 +38,12 @@
     UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //添加左边和中间Vc
     LeftMenuController *leftVC = [mainSb instantiateViewControllerWithIdentifier:@"LeftVC"];
-    MainTableViewController *mainVC = [mainSb instantiateViewControllerWithIdentifier:@"MainVC"];
+//    MainTableViewController *mainVC = [mainSb instantiateViewControllerWithIdentifier:@"MainVC"];
+    
+    MainTabBarController *mainTabBar = [mainSb instantiateViewControllerWithIdentifier:@"MainTabBarVC"];
     
     self.leftMenuViewController = leftVC;
-    self.contentViewController = mainVC;
+    self.contentViewController = mainTabBar;
     
 
     

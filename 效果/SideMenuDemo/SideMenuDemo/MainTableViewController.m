@@ -7,6 +7,7 @@
 //
 
 #import "MainTableViewController.h"
+#import <RESideMenu.h>
 
 @interface MainTableViewController ()
 
@@ -27,6 +28,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action
+- (IBAction)showLeft:(UIBarButtonItem *)sender {
+    
+    //显示侧边栏
+    [self.sideMenuViewController presentLeftMenuViewController];
 }
 
 #pragma mark - Table view data source

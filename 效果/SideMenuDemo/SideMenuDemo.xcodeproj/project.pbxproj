@@ -18,6 +18,10 @@
 		BCB2B5D21C310F5F004C972D /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5D11C310F5F004C972D /* LeftMenuController.m */; };
 		BCB2B5D51C310F72004C972D /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5D41C310F72004C972D /* MainTableViewController.m */; };
 		BCB2B5D81C311092004C972D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5D71C311092004C972D /* RootViewController.m */; };
+		BCB2B5DB1C31218D004C972D /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5DA1C31218D004C972D /* MainTabBarController.m */; };
+		BCB2B5DF1C31243C004C972D /* Item1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5DE1C31243C004C972D /* Item1ViewController.m */; };
+		BCB2B5E21C312446004C972D /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5E11C312446004C972D /* Item2ViewController.m */; };
+		BCB2B5E51C31245B004C972D /* Item3TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5E41C31245B004C972D /* Item3TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,14 @@
 		BCB2B5D41C310F72004C972D /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		BCB2B5D61C311092004C972D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		BCB2B5D71C311092004C972D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		BCB2B5D91C31218D004C972D /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		BCB2B5DA1C31218D004C972D /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		BCB2B5DD1C31243C004C972D /* Item1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item1ViewController.h; sourceTree = "<group>"; };
+		BCB2B5DE1C31243C004C972D /* Item1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item1ViewController.m; sourceTree = "<group>"; };
+		BCB2B5E01C312446004C972D /* Item2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item2ViewController.h; sourceTree = "<group>"; };
+		BCB2B5E11C312446004C972D /* Item2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item2ViewController.m; sourceTree = "<group>"; };
+		BCB2B5E31C31245B004C972D /* Item3TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item3TableViewController.h; sourceTree = "<group>"; };
+		BCB2B5E41C31245B004C972D /* Item3TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item3TableViewController.m; sourceTree = "<group>"; };
 		C9877DF759F327A90B5C3C5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +126,7 @@
 		BCB2B5A81C3109BA004C972D /* SideMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BCB2B5DC1C312414004C972D /* ItemViewControllers */,
 				BCB2B5CF1C310F21004C972D /* ViewControllers */,
 				BCB2B5AD1C3109BA004C972D /* AppDelegate.h */,
 				BCB2B5AE1C3109BA004C972D /* AppDelegate.m */,
@@ -162,8 +175,23 @@
 				BCB2B5D11C310F5F004C972D /* LeftMenuController.m */,
 				BCB2B5D31C310F72004C972D /* MainTableViewController.h */,
 				BCB2B5D41C310F72004C972D /* MainTableViewController.m */,
+				BCB2B5D91C31218D004C972D /* MainTabBarController.h */,
+				BCB2B5DA1C31218D004C972D /* MainTabBarController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BCB2B5DC1C312414004C972D /* ItemViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCB2B5DD1C31243C004C972D /* Item1ViewController.h */,
+				BCB2B5DE1C31243C004C972D /* Item1ViewController.m */,
+				BCB2B5E01C312446004C972D /* Item2ViewController.h */,
+				BCB2B5E11C312446004C972D /* Item2ViewController.m */,
+				BCB2B5E31C31245B004C972D /* Item3TableViewController.h */,
+				BCB2B5E41C31245B004C972D /* Item3TableViewController.m */,
+			);
+			name = ItemViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,11 +346,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCB2B5B21C3109BA004C972D /* ViewController.m in Sources */,
+				BCB2B5DB1C31218D004C972D /* MainTabBarController.m in Sources */,
 				BCB2B5AF1C3109BA004C972D /* AppDelegate.m in Sources */,
 				BCB2B5D81C311092004C972D /* RootViewController.m in Sources */,
+				BCB2B5E21C312446004C972D /* Item2ViewController.m in Sources */,
 				BCB2B5AC1C3109BA004C972D /* main.m in Sources */,
+				BCB2B5E51C31245B004C972D /* Item3TableViewController.m in Sources */,
 				BCB2B5D51C310F72004C972D /* MainTableViewController.m in Sources */,
 				BCB2B5D21C310F5F004C972D /* LeftMenuController.m in Sources */,
+				BCB2B5DF1C31243C004C972D /* Item1ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
