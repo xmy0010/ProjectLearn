@@ -22,6 +22,8 @@
 		BCB2B5DF1C31243C004C972D /* Item1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5DE1C31243C004C972D /* Item1ViewController.m */; };
 		BCB2B5E21C312446004C972D /* Item2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5E11C312446004C972D /* Item2ViewController.m */; };
 		BCB2B5E51C31245B004C972D /* Item3TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5E41C31245B004C972D /* Item3TableViewController.m */; };
+		BCB2B5E81C313101004C972D /* UIScrollView+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2B5E71C313101004C972D /* UIScrollView+Scale.m */; };
+		BCB2B5EA1C313C90004C972D /* image003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCB2B5E91C313C90004C972D /* image003.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		BCB2B5E11C312446004C972D /* Item2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item2ViewController.m; sourceTree = "<group>"; };
 		BCB2B5E31C31245B004C972D /* Item3TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item3TableViewController.h; sourceTree = "<group>"; };
 		BCB2B5E41C31245B004C972D /* Item3TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item3TableViewController.m; sourceTree = "<group>"; };
+		BCB2B5E61C313101004C972D /* UIScrollView+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Scale.h"; sourceTree = "<group>"; };
+		BCB2B5E71C313101004C972D /* UIScrollView+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Scale.m"; sourceTree = "<group>"; };
+		BCB2B5E91C313C90004C972D /* image003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image003.jpg; sourceTree = "<group>"; };
 		C9877DF759F327A90B5C3C5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +143,8 @@
 				BCB2B5A91C3109BA004C972D /* Supporting Files */,
 				BCB2B5D61C311092004C972D /* RootViewController.h */,
 				BCB2B5D71C311092004C972D /* RootViewController.m */,
+				BCB2B5E61C313101004C972D /* UIScrollView+Scale.h */,
+				BCB2B5E71C313101004C972D /* UIScrollView+Scale.m */,
 			);
 			path = SideMenuDemo;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 				BCB2B5D31C310F72004C972D /* MainTableViewController.h */,
 				BCB2B5D41C310F72004C972D /* MainTableViewController.m */,
 				BCB2B5D91C31218D004C972D /* MainTabBarController.h */,
+				BCB2B5E91C313C90004C972D /* image003.jpg */,
 				BCB2B5DA1C31218D004C972D /* MainTabBarController.m */,
 			);
 			name = ViewControllers;
@@ -278,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCB2B5B51C3109BA004C972D /* Main.storyboard in Resources */,
+				BCB2B5EA1C313C90004C972D /* image003.jpg in Resources */,
 				BCB2B5BA1C3109BA004C972D /* LaunchScreen.xib in Resources */,
 				BCB2B5B71C3109BA004C972D /* Images.xcassets in Resources */,
 			);
@@ -349,6 +358,7 @@
 				BCB2B5DB1C31218D004C972D /* MainTabBarController.m in Sources */,
 				BCB2B5AF1C3109BA004C972D /* AppDelegate.m in Sources */,
 				BCB2B5D81C311092004C972D /* RootViewController.m in Sources */,
+				BCB2B5E81C313101004C972D /* UIScrollView+Scale.m in Sources */,
 				BCB2B5E21C312446004C972D /* Item2ViewController.m in Sources */,
 				BCB2B5AC1C3109BA004C972D /* main.m in Sources */,
 				BCB2B5E51C31245B004C972D /* Item3TableViewController.m in Sources */,

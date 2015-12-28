@@ -175,7 +175,7 @@
                         <view key="tableHeaderView" contentMode="scaleToFill" id="iZC-Uj-cm0">
                             <rect key="frame" x="0.0" y="64" width="600" height="180"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.69056805767663298" blue="0.49589836848540036" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <sections>
                             <tableViewSection id="opk-XV-AUW">
@@ -338,7 +338,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmX-fy-O43" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="587"/>
+            <point key="canvasLocation" x="-860" y="676"/>
         </scene>
     </scenes>
 </document>
