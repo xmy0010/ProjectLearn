@@ -42,6 +42,8 @@
     CGRect scrollRect = self.parallaxImageView.frame;
     scrollRect.origin.y = - (diff / 2.) + moveDistance;
     self.parallaxImageView.frame = scrollRect;
+    NSLog(@"%@", NSStringFromCGRect(scrollRect));
+    NSLog(@"%@", NSStringFromCGRect(inSuperViewRect));
 }
 
 - (void)awakeFromNib {

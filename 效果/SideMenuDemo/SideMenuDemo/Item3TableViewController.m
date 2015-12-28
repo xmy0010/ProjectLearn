@@ -30,6 +30,8 @@
 - (void)addScaleView {
 
     [self.tableView addScaleImageViewWithImage:[UIImage imageNamed:@"image003.jpg"]];
+    
+    UITableView *table = self.tableView;
 }
 
 @end

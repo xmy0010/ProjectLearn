@@ -41,9 +41,9 @@ static NSString *kContentOffset = @"contentOffset";
     if (_scrollView.contentOffset.y < 0) {
         CGFloat offset = _scrollView.contentOffset.y;
         
-        self.frame = CGRectMake(offset, offset, CGRectGetWidth(_scrollView.frame) - offset * 2, CGRectGetHeight(_scrollView.frame) - offset);
+        self.frame = CGRectMake(offset, offset, CGRectGetWidth(_scrollView.frame) - offset * 2, ScaleViewHeight - offset);
     } else {
-         self.frame = CGRectMake(0, 0, CGRectGetWidth(_scrollView.frame) , CGRectGetHeight(_scrollView.frame));
+         self.frame = CGRectMake(0, 0, CGRectGetWidth(_scrollView.frame) , ScaleViewHeight);
     }
 }
 
@@ -78,6 +78,7 @@ static NSString *kContentOffset = @"contentOffset";
     ScaleView *scaleView = [[ScaleView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), ScaleViewHeight)];
     scaleView.scrollView = self;
     
+    scaleView.image = image;
     [self addSubview:scaleView];
     
     //把scaleView送到self的最底层
