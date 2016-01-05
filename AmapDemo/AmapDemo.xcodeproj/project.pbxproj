@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCE9265C1C1179680048B237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE9265B1C1179680048B237 /* main.m */; };
+		BCE9265F1C1179680048B237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE9265E1C1179680048B237 /* AppDelegate.m */; };
+		BCE926621C1179680048B237 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE926611C1179680048B237 /* ViewController.m */; };
+		BCE926651C1179680048B237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE926631C1179680048B237 /* Main.storyboard */; };
+		BCE926671C1179680048B237 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE926661C1179680048B237 /* Images.xcassets */; };
+		BCE9266A1C1179680048B237 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE926681C1179680048B237 /* LaunchScreen.xib */; };
+		BCE926761C1179680048B237 /* AmapDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE926751C1179680048B237 /* AmapDemoTests.m */; };
+		BCE926831C117A850048B237 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926811C117A850048B237 /* MAMapKit.framework */; };
+		BCE926A61C117DAA0048B237 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926A51C117DAA0048B237 /* SystemConfiguration.framework */; };
+		BCE926A81C117DB00048B237 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926A71C117DB00048B237 /* CoreTelephony.framework */; };
+		BCE926AA1C117DB60048B237 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926A91C117DB60048B237 /* libstdc++.6.0.9.dylib */; };
+		BCE926AC1C117DBC0048B237 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926AB1C117DBC0048B237 /* libz.dylib */; };
+		BCE926AE1C117DE20048B237 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926AD1C117DE20048B237 /* CoreLocation.framework */; };
+		BCE926B51C1180FE0048B237 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCE926B41C1180FE0048B237 /* AMap.bundle */; };
+		BCE926B91C1191130048B237 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE926B81C1191130048B237 /* AMapSearchKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCE926701C1179680048B237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCE9264E1C1179680048B237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE926551C1179680048B237;
+			remoteInfo = AmapDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCE926561C1179680048B237 /* AmapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE9265A1C1179680048B237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE9265B1C1179680048B237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCE9265D1C1179680048B237 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCE9265E1C1179680048B237 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCE926601C1179680048B237 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCE926611C1179680048B237 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCE926641C1179680048B237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCE926661C1179680048B237 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BCE926691C1179680048B237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BCE9266F1C1179680048B237 /* AmapDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmapDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE926741C1179680048B237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE926751C1179680048B237 /* AmapDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmapDemoTests.m; sourceTree = "<group>"; };
+		BCE926811C117A850048B237 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		BCE926A51C117DAA0048B237 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BCE926A71C117DB00048B237 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BCE926A91C117DB60048B237 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		BCE926AB1C117DBC0048B237 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BCE926AD1C117DE20048B237 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BCE926B41C1180FE0048B237 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/Versions/2.6.1.2c71e1d.110993/Resources/AMap.bundle; sourceTree = "<group>"; };
+		BCE926B81C1191130048B237 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCE926531C1179680048B237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE926AE1C117DE20048B237 /* CoreLocation.framework in Frameworks */,
+				BCE926B91C1191130048B237 /* AMapSearchKit.framework in Frameworks */,
+				BCE926AC1C117DBC0048B237 /* libz.dylib in Frameworks */,
+				BCE926AA1C117DB60048B237 /* libstdc++.6.0.9.dylib in Frameworks */,
+				BCE926A81C117DB00048B237 /* CoreTelephony.framework in Frameworks */,
+				BCE926A61C117DAA0048B237 /* SystemConfiguration.framework in Frameworks */,
+				BCE926831C117A850048B237 /* MAMapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE9266C1C1179680048B237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCE9264D1C1179680048B237 = {
+			isa = PBXGroup;
+			children = (
+				BCE926AF1C117E370048B237 /* Frameworks */,
+				BCE926581C1179680048B237 /* AmapDemo */,
+				BCE926721C1179680048B237 /* AmapDemoTests */,
+				BCE926571C1179680048B237 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCE926571C1179680048B237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCE926561C1179680048B237 /* AmapDemo.app */,
+				BCE9266F1C1179680048B237 /* AmapDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCE926581C1179680048B237 /* AmapDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BCE9267F1C117A620048B237 /* Amap */,
+				BCE9265D1C1179680048B237 /* AppDelegate.h */,
+				BCE9265E1C1179680048B237 /* AppDelegate.m */,
+				BCE926601C1179680048B237 /* ViewController.h */,
+				BCE926611C1179680048B237 /* ViewController.m */,
+				BCE926631C1179680048B237 /* Main.storyboard */,
+				BCE926661C1179680048B237 /* Images.xcassets */,
+				BCE926681C1179680048B237 /* LaunchScreen.xib */,
+				BCE926591C1179680048B237 /* Supporting Files */,
+			);
+			path = AmapDemo;
+			sourceTree = "<group>";
+		};
+		BCE926591C1179680048B237 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCE9265A1C1179680048B237 /* Info.plist */,
+				BCE9265B1C1179680048B237 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCE926721C1179680048B237 /* AmapDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCE926751C1179680048B237 /* AmapDemoTests.m */,
+				BCE926731C1179680048B237 /* Supporting Files */,
+			);
+			path = AmapDemoTests;
+			sourceTree = "<group>";
+		};
+		BCE926731C1179680048B237 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCE926741C1179680048B237 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCE9267F1C117A620048B237 /* Amap */ = {
+			isa = PBXGroup;
+			children = (
+				BCE926B81C1191130048B237 /* AMapSearchKit.framework */,
+				BCE926B41C1180FE0048B237 /* AMap.bundle */,
+				BCE926811C117A850048B237 /* MAMapKit.framework */,
+			);
+			path = Amap;
+			sourceTree = "<group>";
+		};
+		BCE926AF1C117E370048B237 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCE926A51C117DAA0048B237 /* SystemConfiguration.framework */,
+				BCE926A71C117DB00048B237 /* CoreTelephony.framework */,
+				BCE926A91C117DB60048B237 /* libstdc++.6.0.9.dylib */,
+				BCE926AB1C117DBC0048B237 /* libz.dylib */,
+				BCE926AD1C117DE20048B237 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCE926551C1179680048B237 /* AmapDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE926791C1179680048B237 /* Build configuration list for PBXNativeTarget "AmapDemo" */;
+			buildPhases = (
+				BCE926521C1179680048B237 /* Sources */,
+				BCE926531C1179680048B237 /* Frameworks */,
+				BCE926541C1179680048B237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AmapDemo;
+			productName = AmapDemo;
+			productReference = BCE926561C1179680048B237 /* AmapDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCE9266E1C1179680048B237 /* AmapDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE9267C1C1179680048B237 /* Build configuration list for PBXNativeTarget "AmapDemoTests" */;
+			buildPhases = (
+				BCE9266B1C1179680048B237 /* Sources */,
+				BCE9266C1C1179680048B237 /* Frameworks */,
+				BCE9266D1C1179680048B237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCE926711C1179680048B237 /* PBXTargetDependency */,
+			);
+			name = AmapDemoTests;
+			productName = AmapDemoTests;
+			productReference = BCE9266F1C1179680048B237 /* AmapDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCE9264E1C1179680048B237 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "千锋";
+				TargetAttributes = {
+					BCE926551C1179680048B237 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					BCE9266E1C1179680048B237 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = BCE926551C1179680048B237;
+					};
+				};
+			};
+			buildConfigurationList = BCE926511C1179680048B237 /* Build configuration list for PBXProject "AmapDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCE9264D1C1179680048B237;
+			productRefGroup = BCE926571C1179680048B237 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCE926551C1179680048B237 /* AmapDemo */,
+				BCE9266E1C1179680048B237 /* AmapDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCE926541C1179680048B237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE926651C1179680048B237 /* Main.storyboard in Resources */,
+				BCE9266A1C1179680048B237 /* LaunchScreen.xib in Resources */,
+				BCE926B51C1180FE0048B237 /* AMap.bundle in Resources */,
+				BCE926671C1179680048B237 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE9266D1C1179680048B237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCE926521C1179680048B237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE926621C1179680048B237 /* ViewController.m in Sources */,
+				BCE9265F1C1179680048B237 /* AppDelegate.m in Sources */,
+				BCE9265C1C1179680048B237 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE9266B1C1179680048B237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE926761C1179680048B237 /* AmapDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCE926711C1179680048B237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCE926551C1179680048B237 /* AmapDemo */;
+			targetProxy = BCE926701C1179680048B237 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCE926631C1179680048B237 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCE926641C1179680048B237 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BCE926681C1179680048B237 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCE926691C1179680048B237 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCE926771C1179680048B237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BCE926781C1179680048B237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCE9267A1C1179680048B237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AmapDemo/Amap",
+				);
+				INFOPLIST_FILE = AmapDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCE9267B1C1179680048B237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AmapDemo/Amap",
+				);
+				INFOPLIST_FILE = AmapDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCE9267D1C1179680048B237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AmapDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmapDemo.app/AmapDemo";
+			};
+			name = Debug;
+		};
+		BCE9267E1C1179680048B237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AmapDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmapDemo.app/AmapDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCE926511C1179680048B237 /* Build configuration list for PBXProject "AmapDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE926771C1179680048B237 /* Debug */,
+				BCE926781C1179680048B237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE926791C1179680048B237 /* Build configuration list for PBXNativeTarget "AmapDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE9267A1C1179680048B237 /* Debug */,
+				BCE9267B1C1179680048B237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCE9267C1C1179680048B237 /* Build configuration list for PBXNativeTarget "AmapDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE9267D1C1179680048B237 /* Debug */,
+				BCE9267E1C1179680048B237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCE9264E1C1179680048B237 /* Project object */;
+}
