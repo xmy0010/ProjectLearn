@@ -31,3 +31,4 @@ link my mini with github.
 ```
 
 ##Demo2通过第三方库RESideMenu实现一个侧滑效果
+####关于分类里面添加属性property

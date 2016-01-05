@@ -86,6 +86,7 @@ static NSString *kContentOffset = @"contentOffset";
     
     self.scaleView = scaleView;
     
+    
 }
 
 - (void)removeScaleImageView {
