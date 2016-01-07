@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  BmobDemo
+//
+//  Created by 千锋 on 16/1/7.
+//  Copyright (c) 2016年 千锋. All rights reserved.
+//
+
+#ifndef BmobDemo_PrefixHeader_pch
+#define BmobDemo_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <RESideMenu.h>
+#import <SVProgressHUD.h>
+#import <BmobSDK/Bmob.h>
+#import <UIImageView+WebCache.h>
+
+#define Bmob_ApplicationID @"dad85b843364d015ad98cfd6724f1344"
+
+
+#define User_Refresh_Notice @"UserRefresh"
+
+#endif
