@@ -68,7 +68,17 @@
         if (urlString == nil) {
             return;
         }
-        [self.userIcon sd_setImageWithURL:[NSURL URLWithString:urlString]];
+
+        //获取服务器处理之后图片的地址 传入服务器上图片的地址 在Block中返回对象
+        [BmobImage cutImageBySpecifiesTheWidth:100 height:100 quality:50 sourceImageUrl:urlString outputType:kBmobImageOutputBmobFile resultBlock:^(id object, NSError *error) {
+            
+            //object里面 处理之后图片的url group filename
+            BmobFile *resFile = object;
+            NSString *resUrl = resFile.url;
+            
+            [self.userIcon sd_setImageWithURL:[NSURL URLWithString:resUrl]];
+            NSLog(@"%@", resUrl);
+        }];
     } else {
         
         self.username.text = @"点击头像登录";

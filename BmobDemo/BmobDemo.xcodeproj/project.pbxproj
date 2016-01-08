@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F067C97DA0B325B62EE0E53 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 419829AF6295D7CD8964855A /* libPods.a */; };
+		BCA8C13D1C3F950B0022ED9F /* VerifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA8C13C1C3F950B0022ED9F /* VerifyPhoneViewController.m */; };
 		BCFDA6BC1C3DF7590065F078 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDA6BB1C3DF7590065F078 /* main.m */; };
 		BCFDA6BF1C3DF7590065F078 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFDA6BE1C3DF7590065F078 /* AppDelegate.m */; };
 		BCFDA6C51C3DF7590065F078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFDA6C31C3DF7590065F078 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		164C85C0445305A62FDF4F62 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		419829AF6295D7CD8964855A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4350A02E663E4884057D4F7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BCA8C13B1C3F950B0022ED9F /* VerifyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyPhoneViewController.h; sourceTree = "<group>"; };
+		BCA8C13C1C3F950B0022ED9F /* VerifyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyPhoneViewController.m; sourceTree = "<group>"; };
 		BCFDA6B61C3DF7590065F078 /* BmobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BmobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFDA6BA1C3DF7590065F078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFDA6BB1C3DF7590065F078 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				BCFDA6F41C3E144D0065F078 /* RegisterViewController.m */,
 				BCFDA6F91C3E56DE0065F078 /* UserInfoViewController.h */,
 				BCFDA6FA1C3E56DE0065F078 /* UserInfoViewController.m */,
+				BCA8C13B1C3F950B0022ED9F /* VerifyPhoneViewController.h */,
+				BCA8C13C1C3F950B0022ED9F /* VerifyPhoneViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA8C13D1C3F950B0022ED9F /* VerifyPhoneViewController.m in Sources */,
 				BCFDA6BF1C3DF7590065F078 /* AppDelegate.m in Sources */,
 				BCFDA6E61C3DFE0E0065F078 /* LeftViewController.m in Sources */,
 				BCFDA6BC1C3DF7590065F078 /* main.m in Sources */,
