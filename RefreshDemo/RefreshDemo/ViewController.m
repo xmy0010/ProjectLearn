@@ -47,10 +47,11 @@
     self.tableView.estimatedRowHeight = 200;//估算高度
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-//    [self requestData];
+    [self requestData];
     
-    [self setupRefresh];
+//    [self setupRefresh];
     
+    [self setupGIFRefresh];
     //进入界面就刷新
     [self.tableView.mj_header beginRefreshing];
 }
@@ -97,6 +98,57 @@
     self.tableView.mj_footer = refreshFooter;
     //关闭自动刷新
     refreshFooter.automaticallyRefresh = NO;
+}
+
+- (void)setupGIFRefresh {
+
+    __weak typeof(self)weakSelf = self;
+    
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        _tempPage = _currentPage;
+        _currentPage = 1;
+        [weakSelf requestData];
+    }];
+    self.tableView.mj_header = header;
+    
+    //隐藏‘下拉刷新’文字
+    header.stateLabel.hidden = YES;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    
+     NSMutableArray *norArr = @[].mutableCopy;
+     NSMutableArray *pullArr = @[].mutableCopy;
+     NSMutableArray *refreshArr = @[].mutableCopy;
+    
+    for (int i = 0; i < 1; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"pic%d", i];
+        UIImage *image = [UIImage imageNamed:imageName];
+        [norArr addObject:image];
+    }
+    
+    for (int i = 1; i < 10; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"pic%d", i];
+        UIImage *image = [UIImage imageNamed:imageName];
+        [pullArr addObject:image];
+    }
+    
+    for (int i = 0; i < 50; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"pic%d", i];
+        UIImage *image = [UIImage imageNamed:imageName];
+        [refreshArr addObject:image];
+    }
+
+    
+    [header setImages:norArr duration:1 forState:MJRefreshStateIdle];
+    [header setImages:pullArr duration:2 forState:MJRefreshStatePulling];
+    [header setImages:refreshArr duration:2 forState:MJRefreshStateRefreshing];
+    
+    
+    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        
+        _currentPage++;
+        [weakSelf requestData];
+    }];
+    self.tableView.mj_footer = footer;
 }
 
 - (void)didReceiveMemoryWarning {
