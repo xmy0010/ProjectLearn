@@ -31,4 +31,19 @@ link my mini with github.
 ```
 
 ##Demo2通过第三方库RESideMenu实现一个侧滑效果
+<<<<<<< HEAD
 ####关于分类里面添加属性property
+=======
+
+####1.关于AFNetworking 请求下来的数据格式不是json需要手动添加支持的格式
+   ```Obj-C
+	 AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    //设置请求Header参数
+    [sessionManager.requestSerializer setValue: API_KEY forHTTPHeaderField:@"apikey"];
+    //可接收的返回值类型
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plan",@"text/html",nil];
+
+
+####2.duplicate symbol _OBJC_METACLASS_$_ClassNameduplicate 错误 可能是在一个类的.m中导入了另一个类的.m
+
+>>>>>>> 15b878310fcbcbee1ab0e9117debe19d81d68194

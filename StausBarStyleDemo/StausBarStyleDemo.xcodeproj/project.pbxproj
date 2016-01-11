@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC78E8AC1C40DC4000DE695C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78E8AB1C40DC4000DE695C /* main.m */; };
+		BC78E8AF1C40DC4000DE695C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78E8AE1C40DC4000DE695C /* AppDelegate.m */; };
+		BC78E8B21C40DC4100DE695C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78E8B11C40DC4100DE695C /* ViewController.m */; };
+		BC78E8B51C40DC4100DE695C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC78E8B31C40DC4100DE695C /* Main.storyboard */; };
+		BC78E8B71C40DC4100DE695C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC78E8B61C40DC4100DE695C /* Images.xcassets */; };
+		BC78E8BA1C40DC4100DE695C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC78E8B81C40DC4100DE695C /* LaunchScreen.xib */; };
+		BC78E8C61C40DC4100DE695C /* StausBarStyleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78E8C51C40DC4100DE695C /* StausBarStyleDemoTests.m */; };
+		BC78E8D11C40DC7D00DE695C /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78E8D01C40DC7D00DE695C /* MyNavigationController.m */; };
+		BC78E8D41C40DC9000DE695C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78E8D31C40DC9000DE695C /* SecondViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC78E8C01C40DC4100DE695C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC78E89E1C40DC4000DE695C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC78E8A51C40DC4000DE695C;
+			remoteInfo = StausBarStyleDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC78E8A61C40DC4000DE695C /* StausBarStyleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StausBarStyleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC78E8AA1C40DC4000DE695C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC78E8AB1C40DC4000DE695C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC78E8AD1C40DC4000DE695C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC78E8AE1C40DC4000DE695C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC78E8B01C40DC4000DE695C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC78E8B11C40DC4100DE695C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC78E8B41C40DC4100DE695C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC78E8B61C40DC4100DE695C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BC78E8B91C40DC4100DE695C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BC78E8BF1C40DC4100DE695C /* StausBarStyleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StausBarStyleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC78E8C41C40DC4100DE695C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC78E8C51C40DC4100DE695C /* StausBarStyleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StausBarStyleDemoTests.m; sourceTree = "<group>"; };
+		BC78E8CF1C40DC7D00DE695C /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		BC78E8D01C40DC7D00DE695C /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		BC78E8D21C40DC9000DE695C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		BC78E8D31C40DC9000DE695C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC78E8A31C40DC4000DE695C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC78E8BC1C40DC4100DE695C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC78E89D1C40DC4000DE695C = {
+			isa = PBXGroup;
+			children = (
+				BC78E8A81C40DC4000DE695C /* StausBarStyleDemo */,
+				BC78E8C21C40DC4100DE695C /* StausBarStyleDemoTests */,
+				BC78E8A71C40DC4000DE695C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC78E8A71C40DC4000DE695C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC78E8A61C40DC4000DE695C /* StausBarStyleDemo.app */,
+				BC78E8BF1C40DC4100DE695C /* StausBarStyleDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC78E8A81C40DC4000DE695C /* StausBarStyleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BC78E8AD1C40DC4000DE695C /* AppDelegate.h */,
+				BC78E8AE1C40DC4000DE695C /* AppDelegate.m */,
+				BC78E8B01C40DC4000DE695C /* ViewController.h */,
+				BC78E8B11C40DC4100DE695C /* ViewController.m */,
+				BC78E8B31C40DC4100DE695C /* Main.storyboard */,
+				BC78E8B61C40DC4100DE695C /* Images.xcassets */,
+				BC78E8B81C40DC4100DE695C /* LaunchScreen.xib */,
+				BC78E8A91C40DC4000DE695C /* Supporting Files */,
+				BC78E8CF1C40DC7D00DE695C /* MyNavigationController.h */,
+				BC78E8D01C40DC7D00DE695C /* MyNavigationController.m */,
+				BC78E8D21C40DC9000DE695C /* SecondViewController.h */,
+				BC78E8D31C40DC9000DE695C /* SecondViewController.m */,
+			);
+			path = StausBarStyleDemo;
+			sourceTree = "<group>";
+		};
+		BC78E8A91C40DC4000DE695C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC78E8AA1C40DC4000DE695C /* Info.plist */,
+				BC78E8AB1C40DC4000DE695C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC78E8C21C40DC4100DE695C /* StausBarStyleDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC78E8C51C40DC4100DE695C /* StausBarStyleDemoTests.m */,
+				BC78E8C31C40DC4100DE695C /* Supporting Files */,
+			);
+			path = StausBarStyleDemoTests;
+			sourceTree = "<group>";
+		};
+		BC78E8C31C40DC4100DE695C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC78E8C41C40DC4100DE695C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC78E8A51C40DC4000DE695C /* StausBarStyleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC78E8C91C40DC4100DE695C /* Build configuration list for PBXNativeTarget "StausBarStyleDemo" */;
+			buildPhases = (
+				BC78E8A21C40DC4000DE695C /* Sources */,
+				BC78E8A31C40DC4000DE695C /* Frameworks */,
+				BC78E8A41C40DC4000DE695C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StausBarStyleDemo;
+			productName = StausBarStyleDemo;
+			productReference = BC78E8A61C40DC4000DE695C /* StausBarStyleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC78E8BE1C40DC4100DE695C /* StausBarStyleDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC78E8CC1C40DC4100DE695C /* Build configuration list for PBXNativeTarget "StausBarStyleDemoTests" */;
+			buildPhases = (
+				BC78E8BB1C40DC4100DE695C /* Sources */,
+				BC78E8BC1C40DC4100DE695C /* Frameworks */,
+				BC78E8BD1C40DC4100DE695C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC78E8C11C40DC4100DE695C /* PBXTargetDependency */,
+			);
+			name = StausBarStyleDemoTests;
+			productName = StausBarStyleDemoTests;
+			productReference = BC78E8BF1C40DC4100DE695C /* StausBarStyleDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC78E89E1C40DC4000DE695C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "千锋";
+				TargetAttributes = {
+					BC78E8A51C40DC4000DE695C = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					BC78E8BE1C40DC4100DE695C = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = BC78E8A51C40DC4000DE695C;
+					};
+				};
+			};
+			buildConfigurationList = BC78E8A11C40DC4000DE695C /* Build configuration list for PBXProject "StausBarStyleDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC78E89D1C40DC4000DE695C;
+			productRefGroup = BC78E8A71C40DC4000DE695C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC78E8A51C40DC4000DE695C /* StausBarStyleDemo */,
+				BC78E8BE1C40DC4100DE695C /* StausBarStyleDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC78E8A41C40DC4000DE695C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC78E8B51C40DC4100DE695C /* Main.storyboard in Resources */,
+				BC78E8BA1C40DC4100DE695C /* LaunchScreen.xib in Resources */,
+				BC78E8B71C40DC4100DE695C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC78E8BD1C40DC4100DE695C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC78E8A21C40DC4000DE695C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC78E8D41C40DC9000DE695C /* SecondViewController.m in Sources */,
+				BC78E8B21C40DC4100DE695C /* ViewController.m in Sources */,
+				BC78E8D11C40DC7D00DE695C /* MyNavigationController.m in Sources */,
+				BC78E8AF1C40DC4000DE695C /* AppDelegate.m in Sources */,
+				BC78E8AC1C40DC4000DE695C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC78E8BB1C40DC4100DE695C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC78E8C61C40DC4100DE695C /* StausBarStyleDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC78E8C11C40DC4100DE695C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC78E8A51C40DC4000DE695C /* StausBarStyleDemo */;
+			targetProxy = BC78E8C01C40DC4100DE695C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC78E8B31C40DC4100DE695C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC78E8B41C40DC4100DE695C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC78E8B81C40DC4100DE695C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC78E8B91C40DC4100DE695C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC78E8C71C40DC4100DE695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BC78E8C81C40DC4100DE695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC78E8CA1C40DC4100DE695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StausBarStyleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC78E8CB1C40DC4100DE695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StausBarStyleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC78E8CD1C40DC4100DE695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StausBarStyleDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StausBarStyleDemo.app/StausBarStyleDemo";
+			};
+			name = Debug;
+		};
+		BC78E8CE1C40DC4100DE695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StausBarStyleDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StausBarStyleDemo.app/StausBarStyleDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC78E8A11C40DC4000DE695C /* Build configuration list for PBXProject "StausBarStyleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC78E8C71C40DC4100DE695C /* Debug */,
+				BC78E8C81C40DC4100DE695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC78E8C91C40DC4100DE695C /* Build configuration list for PBXNativeTarget "StausBarStyleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC78E8CA1C40DC4100DE695C /* Debug */,
+				BC78E8CB1C40DC4100DE695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC78E8CC1C40DC4100DE695C /* Build configuration list for PBXNativeTarget "StausBarStyleDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC78E8CD1C40DC4100DE695C /* Debug */,
+				BC78E8CE1C40DC4100DE695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC78E89E1C40DC4000DE695C /* Project object */;
+}

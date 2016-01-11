@@ -1,0 +1,4 @@
+platform:ios,'8.0'
+pod 'MJRefresh'
+pod 'AFNetworking','~>2.6.3'
+pod 'YYModel'
