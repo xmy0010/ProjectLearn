@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  SinaShareSDK
+//
+//  Created by 千锋 on 16/1/11.
+//  Copyright (c) 2016年 千锋. All rights reserved.
+//
+
+#ifndef SinaShareSDK_PrefixHeader_pch
+#define SinaShareSDK_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kAppKey @"2738869356"
+#define kRedirectURl @"http://www.baidu.com"
+#import "WeiboSDK.h"
+
+#endif
