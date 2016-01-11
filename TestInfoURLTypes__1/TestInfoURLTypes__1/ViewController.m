@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -25,9 +26,10 @@
 }
 - (IBAction)backApplication:(UIButton *)sender {
     
-    NSString *urlStr = @"APP://";
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+   
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: appDelegate.sourceUrlSting]];
 }
 
 @end

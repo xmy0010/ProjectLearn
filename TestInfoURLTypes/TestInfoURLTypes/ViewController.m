@@ -20,7 +20,7 @@
 }
 - (IBAction)toAPP__1:(id)sender {
     
-    NSString *urlString = @"APP1://";
+    NSString *urlString = @"APP1://APP=APP";
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
     
