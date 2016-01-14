@@ -42,8 +42,37 @@ link my mini with github.
     [sessionManager.requestSerializer setValue: API_KEY forHTTPHeaderField:@"apikey"];
     //可接收的返回值类型
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plan",@"text/html",nil];
-
+```
 
 ####2.duplicate symbol _OBJC_METACLASS_$_ClassNameduplicate 错误 可能是在一个类的.m中导入了另一个类的.m
 
->>>>>>> 15b878310fcbcbee1ab0e9117debe19d81d68194
+
+####3. 让视图控制器旋转实现方法3个
+```Objctive-C
+//1.是否支持旋转
+- (BOOL)shouldAutorotate {
+
+    return YES;
+}
+
+//2.支持哪些旋转方向
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+
+//    UIInterfaceOrientationMaskPortrait = (1 << UIInterfaceOrientationPortrait),
+//    UIInterfaceOrientationMaskLandscapeLeft = (1 << UIInterfaceOrientationLandscapeLeft),
+//    UIInterfaceOrientationMaskLandscapeRight = (1 << UIInterfaceOrientationLandscapeRight),
+//    UIInterfaceOrientationMaskPortraitUpsideDown = (1 << UIInterfaceOrientationPortraitUpsideDown),
+//    UIInterfaceOrientationMaskLandscape = (UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight),
+//    UIInterfaceOrientationMaskAll = (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskPortraitUpsideDown),
+//    UIInterfaceOrientationMaskAllButUpsideDown = (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight),
+    
+    
+    return UIInterfaceOrientationMaskAll;
+}
+
+//3.优先选择哪个方向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+
+    return UIInterfaceOrientationLandscapeRight;
+}
+
