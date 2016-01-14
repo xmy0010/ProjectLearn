@@ -1,0 +1,219 @@
+#苹果原生推送服务流程
+##准备工作 （此教程只做开发使用，发布仅供参考）
+- 开发者账号，付费的那种
+- 真机一台，可以是iPhone,iPad,iPod touch. 模拟器是不支持推送的。
+
+## 第一步 证书的制作
+###一、生成一个Certificate Signing Request(也就是CSR)请求文件。  
+到应用程序-->其它-->钥匙串访问
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns01.png)
+
+打开钥匙串访问点击左上角 **钥匙串访问** 选择证书助理-->从证书颁发机构请求证书
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns02.png)
+
+填写CSR相关邮箱和名称
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns03.png)
+
+选择继续，选个文件夹保存起来，例如我保存在桌面一个叫PUSH的文件夹下面(后面都称作PUSH文件夹),选择存储。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns04.png)
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns05.png)
+
+完成后我们会在PUSH文件夹下看到一个CertificateSigningRequest.certSigningRequest的请求文件
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns06.png)
+
+###二、下载开发证书和推送证书
+这里为了方便，我将我的开发者账号里面的开发证书都已经吊销。(请勿随意模仿，不然老板有肯能请你喝茶的)，**如果你的开发电脑上已经有开发证书可以忽略生成开发证书步骤**。  
+到[苹果开发者中心](https://developer.apple.com/membercenter/index.action)登录账号，选择Certificates,Identifiers & Profiles。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns07.png)  
+**生成开发证书**  
+****
+选择左边菜单 Certificates 中的Development,然后点击右上角+号,然后选择iOS App Development,然后最下面点击continue,下一步继续continue。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns08.png)  
+到选择上传CSR文件步骤，上传刚才生成的存储在PUSH文件夹下面的Certificate Signing Request文件，然后继续往后
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns09.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns10.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns11.png) 
+生成完成后下载下来，会有一个ios_development.cer文件，将它存储到PUSH文件夹中(存到哪里随你，但是建议存到你找的到的地方)，双击打开这个文件，你会发现在钥匙串-->我的证书中多了一个证书文件
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns12.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns13.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns14.png)  
+OK到这里你的开发证书已经生成完毕。
+****
+
+**生成推送证书**  
+其实生成推送证书的过程和生成开发证书基本上一样。只是在生成推送证书之前我们需要先创建一个AppID,因为推送需要根据某个具体的应用来推送，所以需要首先在苹果注册一个应用的ID。  
+【生成AppID】  
+还是回到刚才的Developer中心页面。 这次我们选择创建Identifiers下面 App IDs,点击右上角+号，填写一个Name，这个Name不能用中文，为什么？因为会报错。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns15.png)  
+把页面滑动到下面，选择Explicit App ID,这里不能选择Wildcard App ID,为什么？因为通配的ID不能做推送，想想就明白了，通配的ID可以创建N个应用，而推送只能针对特定的某个应用。填写一个Bundle ID，**<font color = #ff0000>这个要记住，到后面的项目中要使用到</font>**。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns16.png)  
+
+继续往下拉，选择Push Notifications,然后下一步下一步一直到done完成。你会在App IDs里面发现你创建的App ID
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns16.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns17.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns18.png)  
+
+现在回到生成推送证书上面来,还是在Developer中心页面。选择Certificates 中的Development,然后点击右上角+号,这一次我们选择Apple Push Notification service SSL (Sandbox)
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns19.png)  
+下一步后你需要选择对应的AppID，选中你刚才生成的AppID
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns20.png)  
+上传刚才使用过的CSR文件
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns21.png)
+推送证书生成成功下载下来后放到你的PUSH文件夹中。这时里面会有一个aps_development.cer的文件，双击一下你会发现在钥匙串中多了一个推送证书
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns22.png)
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns23.png)
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns23.1.png)  
+  
+  
+  
+##三、生成Provisioning Profile
+
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns24.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns25.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns26.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns27.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns28.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns29.png)  
+完成之后你会在PUSH文件夹中看到WodePush_pp_Dev.mobileprovision这个文件，双击一下，没有反应，后面会看到效果。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns30.png)  
+
+
+##四、从钥匙串中导出推送证书的p12文件
+打开钥匙串访问找到你的推送证书,选择导出，存放到PUSH文件夹，我们取名叫做push,类型选择个人信息交换(.p12)，这里会要求设置一个密码，我设置为123456，**<font color = 'ff0000'>这个密码在后面要使用到，请记住。</font>**,设置密码后会让我们输入一个密码，这个密码是你的电脑的用户密码。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns31.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns32.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns33.png)  
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns34.png)
+完成之后会在PUSH文件夹中有一个push.p12文件。
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns35.png)  
+  
+以上工作完成之后，在我们的PUSH文件夹中就有了5个文件。
+
+##五、处理证书
+下面打开你的终端，打开到你的PUSH文件夹   ($是命令开始标示,输入命令时不要加上)  
+命令：$<font color = brown> cd Desktop/PUSH/</font>    
+1.把推送的.cer的SSL证书转换为.pem文件，执行命令：  
+$<font color = brown> openssl x509 -in aps_development.cer -inform der -out WodePushCert.pem</font>  
+> Hawie:PUSH hehui$ openssl x509 -in aps_development.cer -inform der -out WodePushCert.pem
+Hawie:PUSH hehui$   
+
+执行完成后会在PUSH文件夹中生成一个WodePushCert.pem文件。
+
+2.把私钥push.p12文件转换为.pem文件，执行命令：  
+$<font color = brown> openssl pkcs12 -nocerts -out WodePushKey.gem -in push.p12</font>  
+这里需要我们输入密码，这个密码就是导出push.p12时设置的密码，我上面设置的是123456，然后这里需要我们对生成的pem文件设置一个**密语**，**<font color = red>这里我们也设置为123456,这里也需要记住</font>**.在后面服务器中需要使用到。
+> Hawie:PUSH hehui$ openssl pkcs12 -nocerts -out WodePushKey.gem -in push.p12
+Enter Import Password:
+MAC verified OK
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+Hawie:PUSH hehui$   
+
+这样PUSH文件夹里面就又多了一个WodePushKey.gem文件。
+
+3.对生成的这两个pem文件再生成一个pem文件，来把证书和私钥整合到一个文件里：  
+$<font color = brown> cat WodePushCert.pem WodePushKey.gem > ck.pem</font>      
+> Hawie:PUSH hehui$ cat WodePushCert.pem WodePushKey.gem >ck.gem
+
+这样我们就又获得了一个ck.gem文件(cert和key的gem)。  
+
+这样刚我们的文件也就制作完毕了。为了测试证书是否能够工作，执行以下命令:    
+$<font color = brown> telnet gateway.sandbox.push.apple.com 2195
+</font>   
+它将尝试发送一个规则的，不加密的连接到APNS服务。如果你看到上面的反馈，那说明你的MAC能够到达APNS。按下Ctrl+C关闭连接。如果得到一个错误信息，那么你需要确保你的防火墙允许2195端口。一般这里都不会出现什么问题。  
+> Hawie:PUSH hehui$ telnet gateway.sandbox.push.apple.com 2195
+Trying 17.110.227.35...
+Connected to gateway.sandbox.push-apple.com.akadns.net.
+Escape character is '^]'.
+Connection closed by foreign host.      
+
+下面我们要使用我们生成的SSL证书和私钥来设置一个安全的链接去链接苹果服务器：
+$<font color = brown> openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert WodePushCert.pem -key WodePushKey.gem </font>  
+执行完这一句命令后需要我们输入密语：123456  
+Enter pass phrase for WodePushKey.gem:  
+后面如果出现一大长串输出，
+> CONNECTED(00000003)
+depth=1 /C=US/O=Entrust, Inc./OU=www.entrust.net/rpa is incorporated by reference/OU=(c) 2009 Entrust, Inc./CN=Entrust Certification Authority - L1C
+verify error:num=20:unable to get local issuer certificate
+verify return:0  
+...... 这里的省略掉  
+ New, TLSv1/SSLv3, Cipher is AES256-SHA
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+SSL-Session:
+    Protocol  : TLSv1
+    Cipher    : AES256-SHA
+    Session-ID: 
+    Session-ID-ctx: 
+    Master-Key: 976D37B00188D0971D6E2BD604424FD442C97114DC7C52DCD83D517D2DB82EAF6DC88A481B744BAC3AD2FAA7F68F89F2
+    Key-Arg   : None
+    Start Time: 1449513713
+    Timeout   : 300 (sec)
+    Verify return code: 0 (ok)  
+       
+ 如果你看到这样的输出，证明没有错误。测试通过。 
+ 
+##六、项目测试
+建立我们的推送的项目（<font color =red>注意BundleIdentifier必须和我们推送应用的App id一致</font>）
+  
+	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+			    // Override point for customization after application launch.
+			    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert| UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]; 
+			    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+			    return YES;
+	}
+	
+	
+	- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+	{
+	    [application registerForRemoteNotifications];
+	}
+	
+	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+	{
+	    
+	    
+	    NSLog(@"deviceToken =%@",deviceToken);
+	}
+	
+	- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+	{
+	    NSLog(@"userinfo = %@",userInfo);
+	}
+	
+	
+	- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+	{
+	    NSLog(@"error = %@",error);
+	}
+
+##七、服务端设置
+
+我们运行程序的时候会有提示，说我们的程序要发送推送通知。记得要选允许。  
+这里需要一个服务端代码，[php服务端推送代码](http://pan.baidu.com/s/1kUhzGGJ),提取密码tw8y，下载后将代码放到PUSH文件夹中。
+获取到你的DeviceToken之后将php代码中的替换，密语也修改成你自己前面设置的密语
+
+![图片](http://7xoqws.com1.z0.glb.clouddn.com/Apns36.png)  
+
+最后执行命令：  
+$ <font color = Orange> php pushMe.php </font>   
+如果接受到了推送，那么恭喜你成功了！
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
