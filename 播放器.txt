@@ -1,0 +1,70 @@
+##流媒体--视屏播放器
+
+//观察当前播放对象的进度
+
+	- (void)addObserverToPlayerItem:(AVPlayerItem *)playerItem {
+	    [playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+	    [playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
+	}
+	
+	- (void)removeObserverFromPlayerItem:(AVPlayerItem *)playerItem {
+	    [playerItem removeObserver:self forKeyPath:@"status"];
+	    [playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+	}
+	
+	- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+	{
+	    AVPlayerItem *playItem = object;
+	    
+	    if ([keyPath isEqualToString:@"loadedTimeRanges"]) {
+	        NSArray *array = playItem.loadedTimeRanges;
+	        CMTimeRange timeRange = [array.firstObject CMTimeRangeValue]; // 本次缓冲时间范围
+	        float startSeconds = CMTimeGetSeconds(timeRange.start);
+	        float durationSeconds = CMTimeGetSeconds(timeRange.duration);
+	        NSTimeInterval totalBuffer = startSeconds + durationSeconds; // 缓冲总长度
+	        [self.progressView setProgress:(totalBuffer / CMTimeGetSeconds(playItem.duration)) animated:YES];
+	    }
+	
+	}
+	
+##添加通知，观察播放状态
+
+
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PlaybackStalled:) name:AVPlayerItemPlaybackStalledNotification object:self.player.currentItem];
+
+
+
+###给播放器添加进度更新
+
+
+	- (void)addPeriodicTimeObserver {
+	    
+	    AVPlayerItem *playerItem = self.player.currentItem;
+	    
+	    ASValueTrackingSlider *slider = _slider;
+	    // 设置每秒执行一次
+	    [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+	        float current = CMTimeGetSeconds(time);
+	        float total = CMTimeGetSeconds(playerItem.duration);
+	        if (current) {
+	            [slider setValue:current / total animated:YES];
+	        }
+	    }];
+	}
+### Podfile
+pod 'AFNetworking'  
+pod 'SDWebImage'  
+pod 'MBProgressHUD'  
+pod 'RPSlidingMenu'  
+pod 'Masonry'  
+pod 'ASProgressPopUpView'  
+pod 'ASValueTrackingSlider'  
+
+http://baobab.wandoujia.com/api/v1/feed
+
+
+
+
+	
