@@ -1,0 +1,8 @@
+platform:ios,'8.0'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'RPSlidingMenu'
+pod 'ASProgressPopUpView'
+pod 'ASValueTrackingSlider'
+pod 'KVNProgress'

@@ -1,0 +1,41 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - ASProgressPopUpView (0.8)
+  - ASValueTrackingSlider (0.11.2)
+  - RPSlidingMenu (1.0.3)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SVProgressHUD (1.1.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - ASProgressPopUpView
+  - ASValueTrackingSlider
+  - RPSlidingMenu
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  ASProgressPopUpView: 945c19297da09a625db48a5a37cabd7756916b9b
+  ASValueTrackingSlider: 45c9f78252da60de01d8f2afe869aaf90dd978d9
+  RPSlidingMenu: 6e15173d9f483e96bf38c3bec9b5435cefb5e8d3
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+
+COCOAPODS: 0.39.0
