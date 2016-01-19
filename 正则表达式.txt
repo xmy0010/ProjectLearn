@@ -1,0 +1,12 @@
+NSString *mobileRegex = @"^1([37][0-9]|4[57]|5[0-35-9]|8[0-9]|7[06-8])\\d{8}$";
+
+NSString *mobileReg = @"^1[34578][0-9]\\d{8}$";
+
+NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+
+#define REGEX_PayPASSWORD_LOWLEVEL @"(?=.*\\d.*)(?=.*\\D.*).{6,20}"         // 支付密码强度低
+
+
+#define REGEX_PASSWORD_MIDDLELEVEL @"^(?=.*[A-Z].*).{8,}$"                  // 密码强度中
+
+#define REGEX_PASSWORD_HIGHLEVEL @"^(?=.*\\W.*).{10,}$"
