@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Friends List View Controller-->
+        <scene sceneID="Dhd-xM-iPm">
+            <objects>
+                <tableViewController storyboardIdentifier="FriendsListViewController" id="Kt9-PS-j6N" customClass="FriendsListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Gd-wX-dNb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="Cl1-w3-wkC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cl1-w3-wkC" id="ofE-ok-cra">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kt9-PS-j6N" id="9RR-Hf-9ZL"/>
+                            <outlet property="delegate" destination="Kt9-PS-j6N" id="r97-NT-GCl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4sf-jq-lJp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n8y-lv-sBr">
+                            <connections>
+                                <action selector="addItemPressed:" destination="Kt9-PS-j6N" id="v0a-os-Dby"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ei-8g-jFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="-512"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vnE-rc-5yh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYh-nc-QLW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kEr-tk-iWv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kt9-PS-j6N" kind="relationship" relationship="rootViewController" id="nP8-5t-4jy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOj-vk-97h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="-512"/>
+        </scene>
+    </scenes>
+</document>
